@@ -30,7 +30,7 @@ ul.pages { padding-left: 2em; list-style: square; }
 .selected { font-weight: bold; }
 
 /* Page Content */
-#page { padding-left: 2em; vertical-align: top; background: #EEE4B9; }
+#page { padding-left: 2em; padding-right: 2em; vertical-align: top; background: #EEE4B9; }
 #page h2 { color: #8D0D19; margin-top: 1em;}
 #page h3 { color: #8D0D19; }
 
