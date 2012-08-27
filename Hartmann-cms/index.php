@@ -32,6 +32,9 @@
 			<?php }
 				  else { ?>
 				 		<h2>Welcome</h2>
+				 		<p>
+				 			Maecenas aliquet velit vel turpis. Mauris neque metus, malesuada nec, ultricies sit amet, porttitor mattis, enim. In massa libero, interdum nec, interdum vel, blandit sed, nulla. In ullamcorper, est eget tempor cursus, neque mi consectetuer mi, a ultricies massa est sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Proin nulla arcu, nonummy luctus, dictum eget, fermentum et, lorem. Nunc porta convallis pede.
+				 		</p>
 				 <?php } ?>
 		</td>
 		
