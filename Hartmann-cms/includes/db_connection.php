@@ -1,5 +1,4 @@
 <?php require("config.php"); ?>
-
 <?php 
 	// Create db connection
 	$connection = mysql_connect(DB_SERVER, DB_USER, DB_PASS);

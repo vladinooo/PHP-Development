@@ -18,6 +18,8 @@
 					echo "<a href=\"admin_login.php\" class=\"italic_link\">Log in</a>";
 				}
 			?>
+			<br /><br />
+			<p style="font-size: 10px; font-style: italic;">un: admin <br /> pw: admin1</p>
 			
 		</td>
 		

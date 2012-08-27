@@ -7,7 +7,8 @@
 	}
 ?>
 	<p>Page name: <input type="text" name="menu_name"
-	value="<?php echo $selected_page['menu_name']; ?>" id="menu_name" />
+	value="<?php if (!$new_page) { echo $selected_page['menu_name']; } 
+				 else { NULL; }?>" id="menu_name" />
 	</p>
 	
 	<p>Position:
@@ -15,23 +16,30 @@
 		<?php
 			if (!$new_page) {
 				// edit existing page
-				$page_set = get_all_pages_under_subject($selected_page['id']);
+				$page_set = get_all_pages_under_subject($selected_page['subject_id']);
 				$page_count = mysql_num_rows($page_set);
+				
+				// output number of pages
+				for ($count=1; $count <= $page_count; $count++) {
+					echo "<option value=\"{$count}\"";
+					if ($selected_page['position'] == $count) {
+					echo " selected";
+					}
+					echo ">{$count}</option>";
+				}
 			}
 			else {
 				// add new page
 				$page_set = get_all_pages_under_subject($selected_subject['id']);
 				$page_count = mysql_num_rows($page_set) + 1;
+				
+				// output number of pages
+				for ($count=1; $count <= $page_count; $count++) {
+					echo "<option value=\"{$count}\" selected>{$count}</option>";
+				}
 			}
 			
-			// output number of pages
-			for($count = 1; $count <= $page_count +1; $count++) {
-				echo "<option value=\"$count\"";
-				if ($selected_page['position'] == $count) {
-					echo " selected";
-				}
-				echo ">{$count}</option>";
-			}
+			
 		?>
 		</select>
 	</p>
@@ -44,5 +52,7 @@
 	</p>
 	<p>Content:
 		<br />
-		<textarea name="content" rows="20" cols="80"><?php echo $selected_page['content']; ?></textarea>
+		<textarea name="content" rows="20" cols="80"><?php 
+		if (!$new_page) { echo $selected_page['content']; }
+		else { NULL; } ?></textarea>
 	</p>
