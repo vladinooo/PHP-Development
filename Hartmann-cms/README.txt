@@ -8,4 +8,4 @@ The application's main features:
 - User Authentication with SHA-1 encryption
 - User Authorisation using cookies and sessions
 
-Live demo at: http://www.provisuals.co.uk/php-development/hartmann-cms
+Live demo at: http://www.provisuals.co.uk/php-development/Hartmann-cms
